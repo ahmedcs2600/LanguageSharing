@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_f8f3ef"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guideline_default" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guideline_default" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guideline_default" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/guideline_default" />
+
+    <ImageView
+        android:contentDescription="@string/community_member_picture_content_description"
+        android:id="@+id/picture"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:textColor="@color/color_4a494a"
+        android:id="@+id/name"
+        style="@style/TextStyleMediumBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        app:layout_constraintEnd_toStartOf="@id/barrier_end"
+        app:layout_constraintStart_toEndOf="@id/picture"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        tools:text="Martina" />
+
+    <TextView
+        android:id="@+id/topic"
+        style="@style/TextStyleMediumRegular"
+        android:layout_width="0dp"
+        android:textColor="@color/color_7e7e7c"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/picture"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="What's something not many people know about you?" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tv_new,reference_count" />
+
+    <TextView
+        android:background="@drawable/new_label_bg"
+        android:id="@+id/tv_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextStyleSmallBold"
+        android:paddingStart="@dimen/label_padding"
+        android:paddingEnd="@dimen/label_padding"
+        android:text="@string/new_label"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <TextView
+        style="@style/TextStyleSmallBold"
+        android:id="@+id/reference_count"
+        android:textColor="@color/color_706f6e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        tools:text="12" />
+
+    <TextView
+        android:id="@+id/tv_native"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        android:textAllCaps="true"
+        style="@style/BottomLabelStyle"
+        app:layout_constraintBottom_toBottomOf="@id/picture"
+        app:layout_constraintEnd_toStartOf="@+id/tv_native_values"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/picture"
+        android:text="@string/native_label" />
+
+    <TextView
+        android:id="@+id/tv_native_values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        app:layout_constraintBottom_toBottomOf="@id/picture"
+        app:layout_constraintEnd_toStartOf="@+id/tv_learns"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_native"
+        style="@style/BottomLabelValueStyle"
+        android:textAllCaps="true"
+        tools:text="en" />
+
+    <TextView
+        android:id="@+id/tv_learns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        android:textAllCaps="true"
+        style="@style/BottomLabelStyle"
+        app:layout_constraintBottom_toBottomOf="@id/picture"
+        app:layout_constraintEnd_toStartOf="@+id/tv_learn_values"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_native_values"
+        android:text="@string/learns_label" />
+
+    <TextView
+        android:id="@+id/tv_learn_values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        app:layout_constraintBottom_toBottomOf="@id/picture"
+        app:layout_constraintEnd_toStartOf="@+id/like_img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_learns"
+        style="@style/BottomLabelValueStyle"
+        android:textAllCaps="true"
+        tools:text="RU" />
+
+    <ImageView
+        android:contentDescription="@string/like_content_description"
+        android:id="@+id/like_img"
+        android:layout_width="@dimen/like_unlike_img_size"
+        android:padding="@dimen/like_unlike_padding"
+        android:layout_height="@dimen/like_unlike_img_size"
+        android:layout_marginStart="@dimen/spacing_between_items"
+        android:src="@drawable/like"
+        app:layout_constraintBottom_toBottomOf="@id/picture"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_learn_values" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="some_thing_went_wrong">Something went wrong</string>
+    <string name="response_body_not_found">Response Body Not Found</string>
+</resources>

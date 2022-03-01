@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/communityMembersFragment">
+
+    <fragment
+        android:id="@+id/communityMembersFragment"
+        android:name="com.app.languagesharing.ui.communitymembers.fragments.CommunityMembersFragment"
+        android:label="@string/community_label"
+        tools:layout="@layout/fragment_community_members" />
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LanguageSharing</string>
+    <string name="new_label">New</string>
+    <string name="native_label">Native</string>
+    <string name="learns_label">Learns</string>
+    <string name="community_label">Community</string>
+    <string name="community_member_picture_content_description">Community Member</string>
+    <string name="like_content_description">Like Image</string>
+</resources>
