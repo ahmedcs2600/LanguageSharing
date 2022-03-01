@@ -10,7 +10,7 @@ A simple Language Sharing Application.
 ## Architecture
 * Built with Modern Android Development practices
 * Multi Module Application demonstrates SOLID principles and Clean Architecture
-* Utilized Remote, Cache, Data, domain and presentation Layer
+* Utilized remote, cache, data, domain and presentation Layer
 * Includes unit tests of each module
 
 ## 📱 Demo App
@@ -23,10 +23,10 @@ Download the [APK file from here](https://github.com/ahmedcs2600/LanguageSharing
     - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Data objects that notify views when the underlying database changes.
     - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes.
     - [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - Generates a binding class for each XML layout file present in that module and allows you to more easily write code that interacts with views.
-    - - [RoomDatabase](https://developer.android.com/training/data-storage/room) - For caching network data and storing Like status
+    - [RoomDatabase](https://developer.android.com/training/data-storage/room) - For caching network data and storing Like status
 - [Dependency Injection](https://developer.android.com/training/dependency-injection)
     - [Hilt](https://dagger.dev/hilt) - Easier way to incorporate Dagger DI into Android apps.
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
-- [Paging3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - For loading Data in more robust way
+- [Paging3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - For loading pagination data in more robust way
 - [MockK](https://mockk.io) - For Mocking and Unit Testing
 - [Espresso](https://developer.android.com/training/testing/espresso) -For UI Testing
